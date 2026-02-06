@@ -8,14 +8,14 @@
 ***
 
 ## 🚀 Các tính năng chính
-* [cite_start]**Quản lý Hợp đồng Xuất khẩu**: Lưu trữ chi tiết các hợp đồng ký kết với khách hàng, bao gồm thời gian giao hàng, địa điểm, phương thức thanh toán và danh sách sản phẩm đặt hàng[cite: 273, 274].
-* [cite_start]**Định mức Cơ cấu Sản phẩm (BOM)**: Thiết lập bảng cơ cấu sản phẩm – nguyên liệu, cho biết chính xác số lượng từng loại nguyên vật liệu cần thiết để tạo ra một đơn vị thành phẩm[cite: 277].
-* **Quản lý Kho Nguyên liệu**: Theo dõi quy trình nhập nguyên liệu từ khách hàng (kèm thuế GTGT) và xuất nguyên liệu trực tiếp cho từng phân xưởng sản xuất theo ca làm việc[cite: 283, 286, 287].
-* [cite_start]**Quản lý Thành phẩm**: Ghi nhận sản phẩm hoàn thành từ phân xưởng và quản lý việc xuất sản phẩm cho các hợp đồng, ưu tiên các hợp đồng sắp đến hạn giao hàng[cite: 292, 294, 295].
+* [cite_start]**Quản lý Hợp đồng Xuất khẩu**: Lưu trữ chi tiết các hợp đồng ký kết với khách hàng, bao gồm thời gian giao hàng, địa điểm, phương thức thanh toán và danh sách sản phẩm đặt hàng.
+* [cite_start]**Định mức Cơ cấu Sản phẩm (BOM)**: Thiết lập bảng cơ cấu sản phẩm – nguyên liệu, cho biết chính xác số lượng từng loại nguyên vật liệu cần thiết để tạo ra một đơn vị thành phẩm.
+* **Quản lý Kho Nguyên liệu**: Theo dõi quy trình nhập nguyên liệu từ khách hàng (kèm thuế GTGT) và xuất nguyên liệu trực tiếp cho từng phân xưởng sản xuất theo ca làm việc.
+* [cite_start]**Quản lý Thành phẩm**: Ghi nhận sản phẩm hoàn thành từ phân xưởng và quản lý việc xuất sản phẩm cho các hợp đồng, ưu tiên các hợp đồng sắp đến hạn giao hàng.
 * **Hệ thống Báo cáo & Thống kê**:
-    * [cite_start]Thống kê tình hình tồn kho sản phẩm chưa xuất[cite: 298].
-    * Cảnh báo tiến độ hợp đồng (hợp đồng đã hoàn thành, hợp đồng còn thiếu sản phẩm)[cite: 299].
-    * [cite_start]Lập kế hoạch thu mua nguyên liệu dựa trên nhu cầu thực tế của các hợp đồng[cite: 301].
+    * [cite_start]Thống kê tình hình tồn kho sản phẩm chưa xuất.
+    * Cảnh báo tiến độ hợp đồng (hợp đồng đã hoàn thành, hợp đồng còn thiếu sản phẩm).
+    * [cite_start]Lập kế hoạch thu mua nguyên liệu dựa trên nhu cầu thực tế của các hợp đồng.
 
 ***
 
@@ -24,15 +24,15 @@
 * **Ngôn ngữ lập trình**: C# (.NET).
 * **Giao diện**: Windows Forms (WinForms).
 * **Cơ sở dữ liệu**: SQL Server.
-* **Truy vấn dữ liệu**: ADO.NET / Entity Framework Core.
+* **Truy vấn dữ liệu**: ADO.NET.
 
 ***
 
 ## ⚙️ Hướng dẫn cài đặt
 
 ### Yêu cầu hệ thống
-* [.NET SDK](https://dotnet.microsoft.com/download) phù hợp (phiên bản 6.0/8.0 hoặc .NET Framework).
-* [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (LocalDB hoặc Express).
+* [.NET SDK](https://dotnet.microsoft.com/download) phù hợp (phiên bản 8.0 hoặc .NET Framework).
+* [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 * Visual Studio 2019/2022.
 
 ### Các bước cài đặt
@@ -43,12 +43,11 @@
     ```
 
 2.  **Cấu hình Cơ sở dữ liệu**
-    * Chạy file script SQL đính kèm để tạo cấu trúc bảng và các Stored Procedures.
+    * Chạy file script SQL đính kèm để tạo cấu trúc bảng và dữ liệu.
     * Mở tệp cấu hình trong project `DAL`, cập nhật chuỗi kết nối `ConnectionString` để kết nối tới SQL Server của bạn.
 
 3.  **Chạy ứng dụng**
     * Mở file `QLXuatNhapKhau.sln` bằng Visual Studio.
-    * Chọn `QLXuatNhapKhauGUI` làm dự án khởi động (Startup Project).
     * Nhấn `F5` để biên dịch và chạy.
 
 ***
