@@ -1,129 +1,99 @@
-📦 Website Quản Lý Xuất Nhập Khẩu
-📖 Tổng quan
+# 📦 Hệ Thống Quản Lý Nguyên Liệu, Sản Phẩm và Hợp Đồng Xuất Khẩu
 
-Website Quản Lý Xuất Nhập Khẩu là một ứng dụng được xây dựng nhằm hỗ trợ doanh nghiệp trong việc quản lý toàn bộ quy trình xuất – nhập hàng hóa, từ quản lý danh mục hàng hóa, kho bãi, đối tác đến theo dõi các phiếu nhập – xuất và báo cáo tồn kho.
+---
 
-Hệ thống giúp số hóa nghiệp vụ xuất nhập khẩu, giảm thiểu sai sót thủ công, nâng cao hiệu quả quản lý và hỗ trợ ra quyết định nhanh chóng dựa trên dữ liệu tập trung.
+## 📖 Tổng quan
+[cite_start]**Hệ thống Quản lý Xuất Nhập Khẩu** là giải pháp phần mềm được xây dựng để tin học hóa toàn bộ quy trình sản xuất và kinh doanh tại công ty xuất khẩu[cite: 268]. [cite_start]Hệ thống đóng vai trò trung tâm trong việc kết nối dữ liệu giữa các phòng ban (Cung ứng, Kế toán, Kinh doanh) và các phân xưởng sản xuất[cite: 269, 270]. [cite_start]Ứng dụng quản lý chặt chẽ vòng đời hàng hóa: từ khâu nhập mua nguyên liệu, điều phối sản xuất theo định mức, cho đến khi xuất thành phẩm để thanh lý các hợp đồng xuất khẩu quốc tế[cite: 271, 293, 294].
 
-🚀 Các tính năng chính
+***
 
-Quản lý hàng hóa: Thêm, sửa, xóa và tra cứu thông tin mặt hàng xuất – nhập.
+## 🚀 Các tính năng chính
+* [cite_start]**Quản lý Hợp đồng Xuất khẩu**: Lưu trữ chi tiết các hợp đồng ký kết với khách hàng, bao gồm thời gian giao hàng, địa điểm, phương thức thanh toán và danh sách sản phẩm đặt hàng[cite: 273, 274].
+* [cite_start]**Định mức Cơ cấu Sản phẩm (BOM)**: Thiết lập bảng cơ cấu sản phẩm – nguyên liệu, cho biết chính xác số lượng từng loại nguyên vật liệu cần thiết để tạo ra một đơn vị thành phẩm[cite: 277].
+* **Quản lý Kho Nguyên liệu**: Theo dõi quy trình nhập nguyên liệu từ khách hàng (kèm thuế GTGT) và xuất nguyên liệu trực tiếp cho từng phân xưởng sản xuất theo ca làm việc[cite: 283, 286, 287].
+* [cite_start]**Quản lý Thành phẩm**: Ghi nhận sản phẩm hoàn thành từ phân xưởng và quản lý việc xuất sản phẩm cho các hợp đồng, ưu tiên các hợp đồng sắp đến hạn giao hàng[cite: 292, 294, 295].
+* **Hệ thống Báo cáo & Thống kê**:
+    * [cite_start]Thống kê tình hình tồn kho sản phẩm chưa xuất[cite: 298].
+    * Cảnh báo tiến độ hợp đồng (hợp đồng đã hoàn thành, hợp đồng còn thiếu sản phẩm)[cite: 299].
+    * [cite_start]Lập kế hoạch thu mua nguyên liệu dựa trên nhu cầu thực tế của các hợp đồng[cite: 301].
 
-Quản lý kho: Theo dõi số lượng tồn kho theo thời gian thực.
+***
 
-Quản lý phiếu nhập – xuất: Lập và quản lý phiếu nhập kho, phiếu xuất kho.
+## 🛠️ Công nghệ sử dụng
+* **Kiến trúc**: 3-Tier Architecture (GUI - BLL - DAL).
+* **Ngôn ngữ lập trình**: C# (.NET).
+* **Giao diện**: Windows Forms (WinForms).
+* **Cơ sở dữ liệu**: SQL Server.
+* **Truy vấn dữ liệu**: ADO.NET / Entity Framework Core.
 
-Quản lý đối tác: Lưu trữ thông tin khách hàng và nhà cung cấp.
+***
 
-Báo cáo – thống kê: Thống kê nhập, xuất và tồn kho theo thời gian.
+## ⚙️ Hướng dẫn cài đặt
 
-Phân quyền người dùng: Quản lý quyền truy cập theo vai trò (Admin / Nhân viên).
+### Yêu cầu hệ thống
+* [.NET SDK](https://dotnet.microsoft.com/download) phù hợp (phiên bản 6.0/8.0 hoặc .NET Framework).
+* [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (LocalDB hoặc Express).
+* Visual Studio 2019/2022.
 
-🛠️ Công nghệ sử dụng
+### Các bước cài đặt
+1.  **Clone dự án**
+    ```bash
+    git clone [https://github.com/Fong62/QLXuatNhapKhau.git](https://github.com/Fong62/QLXuatNhapKhau.git)
+    cd QLXuatNhapKhau
+    ```
 
-Ngôn ngữ: C#
+2.  **Cấu hình Cơ sở dữ liệu**
+    * Chạy file script SQL đính kèm để tạo cấu trúc bảng và các Stored Procedures.
+    * Mở tệp cấu hình trong project `DAL`, cập nhật chuỗi kết nối `ConnectionString` để kết nối tới SQL Server của bạn.
 
-Nền tảng: .NET
+3.  **Chạy ứng dụng**
+    * Mở file `QLXuatNhapKhau.sln` bằng Visual Studio.
+    * Chọn `QLXuatNhapKhauGUI` làm dự án khởi động (Startup Project).
+    * Nhấn `F5` để biên dịch và chạy.
 
-Mô hình kiến trúc: 3-tier Architecture
+***
 
-Cơ sở dữ liệu: SQL Server
+## 🔐 Hướng dẫn Đăng nhập (Tài khoản mẫu)
 
-Giao diện: Windows Forms / WPF (tùy cấu hình project)
+Hệ thống hỗ trợ phân quyền nghiệp vụ theo các phòng ban chuyên trách:
 
-🧱 Kiến trúc hệ thống
+#### 1. Quản trị viên & Quản lý (Admin/Manager)
+* **Tài khoản:** `admin`
+* **Mật khẩu:** `123`
+* **Nhân sự**: Lê Nguyễn Minh Hoàng (Chức vụ: Quản lý - Trưởng phòng)
+* **Quyền hạn:** Quản lý toàn bộ danh mục đối tác, vật tư; giám sát hoạt động của các phòng ban và xem báo cáo tổng hợp.
 
-Hệ thống được xây dựng theo mô hình 3 lớp (3-tier):
+#### 2. Tài khoản Phòng Cung ứng
+* **Tài khoản:** `HUY`
+* **Mật khẩu:** `123`
+* **Nhân sự**: Nguyễn Trần Gia Huy (Bộ phận: Phòng cung ứng)
+* **Quyền hạn:** Thực hiện nghiệp vụ mua nguyên liệu, lập phiếu nhập/xuất kho vật tư và điều phối sản xuất tại các phân xưởng.
+  
+#### 3. Tài khoản Phòng Kế toán
+* **Tài khoản:** `PHONG`
+* **Mật khẩu:** `123`
+* **Nhân sự**: Nguyễn Hoàng Phong (Bộ phận: Phòng kế toán)
+* **Quyền hạn:** Quản lý các hợp đồng xuất khẩu, theo dõi trị giá hợp đồng, thuế GTGT và lập phiếu xuất thành phẩm cho khách hàng.
 
-GUI (Presentation Layer): Giao diện người dùng
+#### 4. Tài khoản Khách hàng
+* **Tài khoản:** `NGỌC`
+* **Mật khẩu:** `123`
+* **Nhân sự**: Nguyễn Quang Ngọc (Khách hàng)
+* **Quyền hạn:** Theo dõi tình trạng các hợp đồng đã ký kết, xem lịch sử giao nhận hàng và thông báo công nợ cá nhân.
 
-BLL (Business Logic Layer): Xử lý nghiệp vụ xuất nhập khẩu
-
-DAL (Data Access Layer): Tương tác với cơ sở dữ liệu
-
-Mô hình này giúp hệ thống dễ bảo trì, mở rộng và nâng cấp trong tương lai.
-
-⚙️ Hướng dẫn cài đặt
-Yêu cầu hệ thống
-
-Windows 10 trở lên
-
-Visual Studio 2019 / 2022
-
-.NET Framework / .NET SDK tương thích
-
-SQL Server (Express hoặc LocalDB)
-
-Các bước cài đặt
-
-Clone dự án
-
-git clone https://github.com/Fong62/QLXuatNhapKhau.git
-cd QLXuatNhapKhau
-
-
-Mở project
-
-Mở file QLXuatNhapKhau.sln bằng Visual Studio
-
-Đặt project giao diện làm Startup Project
-
-Cấu hình cơ sở dữ liệu
-
-Mở file cấu hình trong thư mục DAL
-
-Cập nhật Connection String phù hợp với SQL Server trên máy
-
-Chạy ứng dụng
-
-Build solution
-
-Nhấn Run (F5) để khởi động chương trình
-
-🔐 Phân quyền người dùng (mô tả)
-
-Admin:
-
-Quản lý toàn bộ dữ liệu
-
-Quản lý hàng hóa, kho, đối tác
-
-Xem báo cáo thống kê
-
-Nhân viên:
-
-Lập phiếu nhập – xuất
-
-Cập nhật thông tin hàng hóa
-
-Theo dõi tồn kho
-
-(Có thể mở rộng phân quyền chi tiết hơn trong tương lai)
-
-📂 Cấu trúc thư mục
+## 📂 Cấu trúc thư mục
+```text
 QLXuatNhapKhau
-├── BLL                 # Xử lý nghiệp vụ xuất nhập khẩu
-├── DAL                 # Truy cập & xử lý dữ liệu
-├── QLXuatNhapKhauGUI   # Giao diện người dùng
-├── QLXuatNhapKhau.sln  # Solution chính
-└── .gitignore
+├── QLXuatNhapKhauGUI     # Giao diện người dùng (Presentation Layer)
+├── BLL                   # Xử lý nghiệp vụ (Business Logic Layer)
+├── DAL                   # Truy cập dữ liệu (Data Access Layer)
+│   ├── DBConnect.cs      # Kết nối và thực thi lệnh SQL
+├── .gitignore            # Loại bỏ các file build tạm thời
+└── QLXuatNhapKhau.sln    # Solution quản lý toàn bộ dự án
+```
 
-🚧 Hướng phát triển
-
-Quản lý hợp đồng xuất – nhập khẩu
-
-Tính thuế, phí và chi phí logistics
-
-Xuất báo cáo Excel / PDF
-
-Phát triển phiên bản Web (ASP.NET Core)
-
-Tích hợp API phục vụ mobile app
-
-📞 Liên hệ
-
-Nguyễn Hoàng Phong
-
-GitHub: Fong62
-
-Email: nguyenhoangphongsupham@gmail.com
+## 📞 Liên hệ
+**Nguyễn Hoàng Phong**
+* **Email:** nguyenhoangphongsupham@gmail.com
+* **LinkedIn:** [Nguyễn Hoàng Phong](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-phong-a95135354/)
+* **GitHub:** [Fong62](https://github.com/Fong62)
