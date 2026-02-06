@@ -8,7 +8,7 @@ namespace DAL
 {
     public class DataAccess
     {
-        private string connString = "Data Source= DESKTOP-K2QLVK4;Initial Catalog=QLXUATNHAPKHAU;Integrated Security=True;TrustServerCertificate=True;Encrypt=False";
+        private string connString = "Data Source= PHONG\\PHONG;Initial Catalog=QLXUATNHAPKHAU;Integrated Security=True;TrustServerCertificate=True;Encrypt=False";
 
         public DataTable ExecuteQuery(string query, SqlParameter[] parameters = null)
         {
