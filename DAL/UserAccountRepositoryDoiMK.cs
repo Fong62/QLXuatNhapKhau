@@ -6,7 +6,7 @@ namespace DAL
 {
     public class UserAccountRepositoryDoiMK
     {
-        private readonly string connstring = "Data Source=DESKTOP-K2QLVK4;Initial Catalog=QLXUATNHAPKHAU;Integrated Security=True;TrustServerCertificate=True;Encrypt=False";
+        private readonly string connstring = "Data Source =PHONG\\PHONG;Initial Catalog=QLXUATNHAPKHAU;Integrated Security=True;TrustServerCertificate=True;Encrypt=False";
 
         // Phương thức cập nhật mật khẩu
         public bool UpdatePassword(string username, string newPassword)
