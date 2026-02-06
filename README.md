@@ -3,8 +3,9 @@
 ---
 
 ## 📖 Tổng quan
-[cite_start]**Hệ thống Quản lý Xuất Nhập Khẩu** là giải pháp phần mềm được xây dựng để tin học hóa toàn bộ quy trình sản xuất và kinh doanh tại công ty xuất khẩu[cite: 268]. [cite_start]Hệ thống đóng vai trò trung tâm trong việc kết nối dữ liệu giữa các phòng ban (Cung ứng, Kế toán, Kinh doanh) và các phân xưởng sản xuất[cite: 269, 270]. [cite_start]Ứng dụng quản lý chặt chẽ vòng đời hàng hóa: từ khâu nhập mua nguyên liệu, điều phối sản xuất theo định mức, cho đến khi xuất thành phẩm để thanh lý các hợp đồng xuất khẩu quốc tế[cite: 271, 293, 294].
+**Hệ thống Quản lý Xuất Nhập Khẩu** là giải pháp phần mềm được xây dựng để tin học hóa toàn bộ quy trình sản xuất và kinh doanh tại công ty xuất khẩu. Hệ thống đóng vai trò trung tâm trong việc kết nối dữ liệu giữa các phòng ban (Cung ứng, Kế toán, Kinh doanh) và các phân xưởng sản xuất. Ứng dụng quản lý chặt chẽ vòng đời hàng hóa: từ khâu nhập mua nguyên liệu, điều phối sản xuất theo định mức, cho đến khi xuất thành phẩm để thanh lý các hợp đồng xuất khẩu quốc tế.<br>
 
+Link tải ứng dụng: 
 ***
 
 ## 🚀 Các tính năng chính
